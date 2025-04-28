@@ -1,0 +1,421 @@
+/* assets/css/style-portal.css */
+
+/* Reset e Base */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --light-gray: #f5f7fa;
+    --medium-gray: #e4e8f0;
+    --dark-gray: #333;
+    --white: #ffffff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logotipo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logotipo img {
+    height: 40px;
+    width: auto;
+}
+
+.logotipo h1 {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.header-items {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.menu a:hover {
+    color: var(--primary-color);
+}
+
+.menu i {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* Main Content - Layout LinkedIn-style */
+main {
+    display: flex;
+    flex: 1;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.portal-section1, .portal-section3 {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.portal-section2 {
+    flex: 2;
+    min-width: 500px;
+    justify-content: center; /* Centraliza verticalmente */
+}
+
+.portal-card {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+}
+
+.menu-card {
+    background: transparent;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 1rem;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-top: 3px solid var(--primary-color);
+   height: 180px; /* Altura fixa para uniformidade */
+}
+
+.menu-card img {
+    width: 40px; /* Reduzido */
+    height: 40px; /* Reduzido */
+    margin-bottom: 0.8rem;
+    border-radius: 50%;
+}
+
+.menu-card h1 {
+    font-size: 1rem; /* Reduzido */
+    margin-bottom: 0.5rem;
+}
+
+.menu-card p {
+    font-size: 0.8rem; /* Reduzido */
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limita a 2 linhas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.menu-card a {
+    display: inline-block;
+    background: transparent;
+    color: var(--secondary-color);
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3);
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 1200px) {
+    .menu-card {
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .menu-card h1 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .portal-card {
+        flex-wrap: wrap;
+    }
+    
+    .menu-card {
+        width: calc(33.33% - 1rem); /* 3 cards por linha */
+        margin-bottom: 1rem;
+    }
+}
+
+/* Cards específicos */
+.conta {
+    height: 400px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(255, 255, 255, 0.8) 100%);
+}
+
+.portal-menu {
+    height: 400px;
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.1) 0%, rgba(255, 255, 255, 0.8) 100%);
+    margin-bottom: 1.5rem;
+    padding-top: 6rem;
+}
+
+.historico {
+    height: 400px;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.05) 0%, rgba(255, 255, 255, 0.9) 100%);
+}
+
+.instrucoes {
+    height: 400px;
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.1) 0%, rgba(255, 255, 255, 0.8) 100%);
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+footer strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Efeitos e Transições */
+.portal-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .portal-section1, .portal-section3 {
+        display: none;
+    }
+    
+    .portal-section2 {
+        flex: 1;
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .logotipo {
+        margin-bottom: 1rem;
+    }
+    
+    .header-items {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .menu {
+        min-width: 60px;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logotipo h1 {
+        font-size: 1.1rem;
+    }
+    
+    .menu a {
+        font-size: 0.75rem;
+    }
+}
+
+.portal-card.conta i.bi-person-circle {
+    font-size: 3.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.portal-card.conta p {
+    color: var(--secondary-color);
+    margin: 0.5rem 0;
+    position: relative;
+    z-index: 1;
+    font-size: 0.95rem;
+}
+
+.portal-card.conta p:first-of-type {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.portal-card.conta a {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3);
+}
+
+.portal-card.conta a:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+}
+
+.portal-card.conta a:active {
+    transform: translateY(0);
+}
+
+.program-instructions {
+    padding: 2rem;
+    border-left: 4px solid #3498db; /* Uma linha de destaque elegante */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.program-instructions p {
+    color: #2c3e50;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+    text-align: justify;
+    padding-left: 1.8rem;
+    position: relative;
+}
+
+.program-instructions p::before {
+    color: #3498db;
+    font-size: 1.1rem;
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+}
+
+.program-instructions p strong {
+    color: #3498db;
+    font-weight: 600;
+}
+
+/* Pequeno efeito hover para interatividade */
+.program-instructions p:hover {
+    color: #1a252f;
+    transition: color 0.3s ease;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .program-instructions {
+        padding: 1.5rem;
+        margin: 1.5rem;
+        border-left-width: 3px;
+    }
+
+    .program-instructions p {
+        font-size: 0.95rem;
+        padding-left: 1.5rem;
+    }
+
+    .program-instructions p::before {
+        font-size: 1rem;
+    }
+}
+
+.user-initial {
+    width: 64px;
+    height: 64px;
+    background-color: #3498db; /* Cor de fundo (pode mudar depois) */
+    color: white; /* Cor da letra */
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Faz o círculo perfeito */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin: 0 auto 1rem; /* Centraliza e dá espaço embaixo */
+    text-transform: uppercase;
+}
+
+/* Opcional: responsividade */
+@media (max-width: 768px) {
+    .user-initial {
+        width: 48px;
+        height: 48px;
+        font-size: 1.5rem;
+    }
+}
